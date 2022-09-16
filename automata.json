@@ -1,0 +1,91 @@
+{
+  "alphabet": ["a", "b"],
+  "entry": "aaaaaaaaaaaaab",
+  "accepting": ["S3", "S4"],
+  "states": [
+    {
+      "state": "S0",
+      "accepting": false,
+      "transition": [
+        {
+          "entry": "a",
+          "states": ["S1", "S2"]
+        },
+        {
+          "entry": "b",
+          "states": ["S5"]
+        }
+      ]
+    },
+    {
+      "state": "S1",
+      "accepting": false,
+      "transition": [
+        {
+          "entry": "a",
+          "states": ["S2"]
+        },
+        {
+          "entry": "b",
+          "states": ["S4"]
+        }
+      ]
+    },
+    {
+      "state": "S2",
+      "accepting": false,
+      "transition": [
+        {
+          "entry": "a",
+          "states": ["S2"]
+        },
+        {
+          "entry": "b",
+          "states": ["S4"]
+        }
+      ]
+    },
+    {
+      "state": "S3",
+      "accepting": true,
+      "transition": [
+        {
+          "entry": "a",
+          "states": ["S5"]
+        },
+        {
+          "entry": "b",
+          "states": ["S3"]
+        }
+      ]
+    },
+    {
+      "state": "S4",
+      "accepting": true,
+      "transition": [
+        {
+          "entry": "a",
+          "states": ["S5"]
+        },
+        {
+          "entry": "b",
+          "states": ["S5"]
+        }
+      ]
+    },
+    {
+      "state": "S5",
+      "accepting": false,
+      "transition": [
+        {
+          "entry": "a",
+          "states": ["S5"]
+        },
+        {
+          "entry": "b",
+          "states": ["S5"]
+        }
+      ]
+    }
+  ]
+}
